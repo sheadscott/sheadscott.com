@@ -1,7 +1,8 @@
 export default () => (
   <React.Fragment>
     <h1>Next JS Template</h1>
-    <p>Here's some sweet Home Page content.</p>
+    <h2>Here's some sweet Home Page content.</h2>
+    <p>Dev Environment</p>
     <p>
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
       nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
