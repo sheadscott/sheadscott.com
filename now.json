@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "sheadscott.com",
+  "name": "sheadscott",
   "public": false,
   "env": {
     "SENDGRID_API": "@sendgrid-api-key"
