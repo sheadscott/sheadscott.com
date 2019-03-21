@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "sheadscott.com",
+  "public": false,
+  "env": {
+    "SENDGRID_API": "@sendgrid-api-key"
+  },
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" },
+    { "src": "/static/*", "use": "@now/static" },
+    { "src": "/api/**/*.js", "use": "@now/node-server" }
+  ],
+  "routes": [
+    {
+      "src": "/api/contact",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": { "cache-control": "immutable" }
+    }
+  ],
+  "alias": ["sheadscott.com"]
+}
