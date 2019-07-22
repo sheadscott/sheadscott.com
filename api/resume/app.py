@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/api/resume/<path:path>/')
 def catch_all(path):
-    data = Path(f'json/{path}.json').read_text()
+    data = Path(f'/json/{path}.json').read_text()
     return Response(data, mimetype="application/json")
 
 
