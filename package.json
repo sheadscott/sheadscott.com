@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn audit && ENV=dev next -p 7777",
+    "apidev": "ENV=dev python3 ./api/resume/app.py",
     "build": "next build",
     "create-sendgrid-secret": "now secret add sendgrid-api-key YOUR_API_KEY_HERE",
     "start": "next start",
