@@ -13,8 +13,7 @@ export default class Home extends Component {
   state = {};
 
   static async getInitialProps() {
-    const api =
-      process.env.ENV === 'dev' ? 'http://127.0.0.1:5000' : 'https://sheadscott.com';
+    const api = process.env.ENV === 'dev' ? 'http://127.0.0.1:5000' : '';
 
     try {
       const basicsApi = await Axios.get(`${api}/api/resume/basics/`);

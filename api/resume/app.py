@@ -9,10 +9,10 @@ app = Flask(__name__)
 def catch_all(path):
     if environ.get('ENV') == 'dev':
         print(requests.get('http://api.tvmaze.com/search/shows?q=girls').json())
-        data = Path(f'json/{path}.json').read_text()
+        data = Path(f'../json/{path}.json').read_text()
 
     else:
-        data = requests.get(f'http://sheadscott.com/api/resume/json/{path}.json').json()
+        data = requests.get(f'http://sheadscott.com/api/json/{path}.json').json()
 
     return Response(data, mimetype="application/json")
 

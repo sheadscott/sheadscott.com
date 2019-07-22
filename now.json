@@ -7,7 +7,7 @@
   },
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },
-    { "src": "/api/resume/json/*.json", "use": "@now/static" },
+    { "src": "/api/json/*.json", "use": "@now/static" },
     { "src": "/api/contact/*.js", "use": "@now/node-server" },
     { "src": "/api/resume/app.py", "use": "@now/python" }
   ],
