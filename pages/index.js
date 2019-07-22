@@ -1,28 +1,48 @@
-export default () => (
-  <React.Fragment>
-    <h1>Next JS Template</h1>
-    <p>Here's some sweet Home Page content.</p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-      nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-      wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-      lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-      iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
-      illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
-      odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-      dolore te feugait nulla facilisi.
-    </p>
-    <p>
-      Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et
-      gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus
-      unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio
-      incongruous feline nolo contendre. Gratuitous octopus niacin, sodium
-      glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus
-      fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad
-      infinitum. Non sequitur condominium facile et geranium incognito. Epsum
-      factorial non deposit quid pro quo hic escorol. Marquee selectus non
-      provisio incongruous feline nolo contendre Olypian quarrels et gorilla
-      congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.
-    </p>
-  </React.Fragment>
-);
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Axios from 'axios';
+import Basics from '../components/Basics';
+import Education from '../components/Education';
+import Work from '../components/Work';
+import Summary from '../components/Summary';
+import Skills from '../components/Skills';
+
+const JSONtheme = 'eighties';
+
+export default class Home extends Component {
+  state = {};
+
+  static async getInitialProps() {
+    const api = process.env.ENV === 'dev' ? 'http://127.0.0.1:5000' : '';
+
+    try {
+      const basicsApi = await Axios.get(`${api}/api/resume/basics/`);
+      const basics = basicsApi.data;
+      const summaryApi = await Axios.get(`${api}/api/resume/summary/`);
+      const summary = summaryApi.data;
+      const educationApi = await Axios.get(`${api}/api/resume/education/`);
+      const education = educationApi.data;
+      const workApi = await Axios.get(`${api}/api/resume/work/`);
+      const work = workApi.data;
+      const skillsApi = await Axios.get(`${api}/api/resume/skills/`);
+      const skills = skillsApi.data;
+      console.log(skills);
+      return { api, basics, summary, education, work, skills };
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  render() {
+    const { api, basics, summary, education, work, skills } = this.props;
+    return (
+      <React.Fragment>
+        <Basics data={basics} api={api} theme={JSONtheme} />
+        <Summary data={summary} api={api} theme={JSONtheme} />
+        <Work data={work} api={api} theme={JSONtheme} />
+        <Education data={education} api={api} theme={JSONtheme} />
+        <Skills data={skills} api={api} theme={JSONtheme} />
+      </React.Fragment>
+    );
+  }
+}

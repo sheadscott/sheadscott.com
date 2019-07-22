@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 const Meta = () => (
   <Head>
@@ -6,9 +6,13 @@ const Meta = () => (
       href="https://fonts.googleapis.com/css?family=Bungee+Shade|Roboto"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
     <meta charSet="utf-8" />
-    <title>Next JS Template</title>
+    <title>Shea Scott, Web Developer, Austin, TX</title>
   </Head>
 );
 

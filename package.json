@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next -p 7777",
+    "dev": "ENV=dev next -p 7777",
     "build": "next build",
     "create-sendgrid-secret": "now secret add sendgrid-api-key YOUR_API_KEY_HERE",
     "start": "next start",
@@ -34,6 +34,7 @@
     "preact": "^8.4.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-json-view": "^1.19.1",
     "remark-images": "^0.17.0",
     "responsive-loader": "^1.2.0",
     "sharp": "^0.21.3",

@@ -1,0 +1,121 @@
+{
+  "selectedTemplate": 7,
+  "headings": {
+    "work": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "",
+    "awards": ""
+  },
+  "basics": {
+    "name": "Shea Scott",
+    "email": "sheadscott@gmail.com",
+    "phone": "(512) 574-8282",
+    "website": "sheadscott.com",
+    "location": {
+      "address": "Austin, TX"
+    }
+  },
+  "education": [
+    {
+      "institution": "Austin Community College",
+      "location": "Austin, TX",
+      "area": "Visual Communications - Graphic Design Specialization",
+      "studyType": "AAS",
+      "startDate": "Sep 2002",
+      "gpa": "",
+      "endDate": "Dec 2005"
+    }
+  ],
+  "work": [
+    {
+      "company": "United States Air Force",
+      "location": "Dover, DE",
+      "website": "",
+      "startDate": "Oct 1997",
+      "endDate": "Aug 2002",
+      "highlights": [
+        "Supervised aircraft loading and off loading, including handling hazardous materials and human remains",
+        "Supervised the safety and comfort of military personnel and dependents during flight"
+      ],
+      "position": "C-5 Loadmaster"
+    },
+    {
+      "highlights": [
+        "Linux system administration and web development  for community banks and credit unions.",
+        ""
+      ],
+      "company": "First ROI",
+      "position": "Website Administrator",
+      "location": "Austin, TX",
+      "startDate": "Jul 2006",
+      "endDate": "Dec 2007"
+    },
+    {
+      "highlights": [
+        ""
+      ],
+      "company": "Austin Community College",
+      "position": "Multimedia Developer",
+      "location": "Austin, TX",
+      "startDate": "Jan 2008 / Jan 2012",
+      "endDate": "Jun 2011 / Aug 2017"
+    },
+    {
+      "highlights": [
+        ""
+      ],
+      "company": "Convio",
+      "position": "Senior Web Developer",
+      "location": "Austin, TX",
+      "startDate": "Jun 2011",
+      "endDate": "Dec 2011"
+    },
+    {
+      "highlights": [
+        ""
+      ],
+      "company": "Austin Community College",
+      "position": "Full Stack Developer",
+      "location": "Austin, TX",
+      "startDate": "Sep 2017",
+      "endDate": "Present"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML CSS Javascript React PHP Python Linux AWS",
+      "level": "",
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "description": "",
+      "url": "",
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
