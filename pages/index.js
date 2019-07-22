@@ -13,7 +13,8 @@ export default class Home extends Component {
   state = {};
 
   static async getInitialProps() {
-    const api = process.env.ENV === 'dev' ? 'http://127.0.0.1:5000' : '';
+    const api =
+      process.env.ENV === 'dev' ? 'http://127.0.0.1:5000' : 'https://sheadscott.com';
 
     try {
       const basicsApi = await Axios.get(`${api}/api/resume/basics/`);
@@ -26,7 +27,6 @@ export default class Home extends Component {
       const work = workApi.data;
       const skillsApi = await Axios.get(`${api}/api/resume/skills/`);
       const skills = skillsApi.data;
-      console.log(skills);
       return { api, basics, summary, education, work, skills };
     } catch (error) {
       console.error(error);
