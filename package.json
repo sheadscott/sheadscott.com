@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ENV=dev next -p 7777",
+    "dev": "yarn audit && ENV=dev next -p 7777",
     "build": "next build",
     "create-sendgrid-secret": "now secret add sendgrid-api-key YOUR_API_KEY_HERE",
     "start": "next start",
@@ -39,14 +39,16 @@
     "responsive-loader": "^1.2.0",
     "sharp": "^0.21.3",
     "styled-components": "^4.1.3",
-    "webp-loader": "^0.4.0",
+    "webp-loader": "^0.5.0",
     "webpack": "^4.29.3"
   },
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@zeit/next-bundle-analyzer": "^0.1.2",
-    "babel-plugin-inline-react-svg": "0.4.0",
+    "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.0"
+  },
+  "resolutions": {
+    "babel-plugin-inline-react-svg/svgo/js-yaml": "^3.13.1"
   },
   "peerDependencies": {},
   "babel": {
