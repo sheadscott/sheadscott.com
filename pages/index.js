@@ -12,7 +12,8 @@ export default class Home extends Component {
   state = {};
 
   static async getInitialProps() {
-    const api = process.env.ENV === 'dev' ? 'http://127.0.0.1:8888' : '';
+    const api =
+      process.env.ENV === 'dev' ? 'http://127.0.0.1:8888' : 'https://sheadscott.com';
 
     const apiData = {};
 
