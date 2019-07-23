@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import Axios from 'axios';
 import Basics from '../components/Basics';
 import Education from '../components/Education';
@@ -13,27 +12,29 @@ export default class Home extends Component {
   state = {};
 
   static async getInitialProps() {
-    const api = process.env.ENV === 'dev' ? 'http://127.0.0.1:5000' : '';
+    const api = process.env.ENV === 'dev' ? 'http://127.0.0.1:8888' : '';
+
+    const apiData = {};
 
     try {
       const basicsApi = await Axios.get(`${api}/api/resume/basics/`);
-      const basics = basicsApi.data;
+      apiData.basics = basicsApi.data;
       const summaryApi = await Axios.get(`${api}/api/resume/summary/`);
-      const summary = summaryApi.data;
+      apiData.summary = summaryApi.data;
       const educationApi = await Axios.get(`${api}/api/resume/education/`);
-      const education = educationApi.data;
+      apiData.education = educationApi.data;
       const workApi = await Axios.get(`${api}/api/resume/work/`);
-      const work = workApi.data;
+      apiData.work = workApi.data;
       const skillsApi = await Axios.get(`${api}/api/resume/skills/`);
-      const skills = skillsApi.data;
-      return { api, basics, summary, education, work, skills };
+      apiData.skills = skillsApi.data;
+      return { apiData };
     } catch (error) {
       console.error(error);
     }
   }
 
   render() {
-    const { api, basics, summary, education, work, skills } = this.props;
+    const { api, basics, summary, education, work, skills } = this.props.apiData;
     return (
       <React.Fragment>
         <Basics data={basics} api={api} theme={JSONtheme} />
