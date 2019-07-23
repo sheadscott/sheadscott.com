@@ -5,12 +5,7 @@
   "env": {
     "SENDGRID_API": "@sendgrid-api-key"
   },
-  "builds": [
-    { "src": "next.config.js", "use": "@now/next" },
-    { "src": "/api/json/*.json", "use": "@now/static" },
-    { "src": "/api/contact/*.js", "use": "@now/node-server" },
-    { "src": "/api/resume/app.py", "use": "@now/python" }
-  ],
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [
     {
       "src": "/api/contact",
@@ -19,8 +14,7 @@
     {
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
       "headers": { "cache-control": "immutable" }
-    },
-    { "src": "/api/resume/(.*)", "dest": "/api/resume/app.py" }
+    }
   ],
   "alias": ["sheadscott.com"]
 }
