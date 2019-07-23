@@ -1,18 +1,18 @@
-const fs = require('fs');
+import { basics, summary, work, education, skills, training } from '../../../static/json';
+
+const jsonData = {};
+jsonData.basics = basics;
+jsonData.summary = summary;
+jsonData.work = work;
+jsonData.skills = skills;
+jsonData.education = education;
+jsonData.training = training;
 
 export default function handle(req, res) {
-  // console.log(req.body); // The request body
-  // console.log(req.cookies); // The passed cookies
   const { section } = req.query;
-  console.log('Section: ', section); // The url querystring
-
-  const realPath = fs.realpathSync('.');
-  console.log('REALPATH: ', realPath);
 
   try {
-    const rawdata = fs.readFileSync(`${realPath}/static/json/${section}.json`);
-    const jsonRes = JSON.parse(rawdata);
-    res.json(jsonRes);
+    res.json(jsonData[section]);
   } catch (error) {
     console.error(error);
   }

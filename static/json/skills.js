@@ -1,0 +1,9 @@
+const skills = {
+  skills: [
+    'Strong in HTML/CSS, Javascript, React, AWS, DevOps',
+    'Experience with Python, GraphQL, React Native',
+    'Sketch, Adobe Creative Suite'
+  ],
+};
+
+export { skills };

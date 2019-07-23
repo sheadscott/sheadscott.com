@@ -1,0 +1,31 @@
+const training = {
+  training: [
+    {
+      title: 'AWS Solutions Architect - Associate',
+      source: 'ACC Continuing Education',
+      date: 'Jun 2017',
+    },
+    {
+      title: 'Docker Mastery',
+      source: 'Udemy',
+      date: 'Aug 2017',
+    },
+    {
+      title: 'React for Beginners',
+      source: 'Wes Bos',
+      date: 'Nov 2018',
+    },
+    {
+      title: 'Advanced React',
+      source: 'Wes Bos',
+      date: 'Feb 2018',
+    },
+    {
+      title: 'The Complete React Native and Redux Course',
+      source: 'Udemy',
+      date: 'Jun 2019',
+    },
+  ],
+};
+
+export { training };

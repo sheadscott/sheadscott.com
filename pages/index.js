@@ -15,7 +15,11 @@ export default class Home extends Component {
     const api =
       process.env.ENV === 'dev' ? 'http://127.0.0.1:8888' : 'https://sheadscott.com';
 
+    // console.log('######## API ###########', api);
+
     const apiData = {};
+    apiData.api = api;
+    // console.log('######## API DATA ###########', apiData.api);
 
     try {
       const basicsApi = await Axios.get(`${api}/api/resume/basics/`);
